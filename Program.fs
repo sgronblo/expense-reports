@@ -1,4 +1,4 @@
-module expense_reports.App
+module ExpenseReports.App
 
 open System
 open System.IO
@@ -12,7 +12,7 @@ open Giraffe.HttpHandlers
 open Giraffe.Middleware
 open Giraffe.Razor.HttpHandlers
 open Giraffe.Razor.Middleware
-open expense_reports.Models
+open ExpenseReports.Models
 
 // ---------------------------------
 // Web app
