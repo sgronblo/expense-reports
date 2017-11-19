@@ -22,6 +22,7 @@ let webApp =
         GET >=>
             choose [
                 route "/" >=> razorHtmlView "Index" { Text = "Hello world, from Giraffe!" }
+                route "/receipt" >=> htmlFile "/Views/Receipt.html"
             ]
         POST >=>
             choose [
