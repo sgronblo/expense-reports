@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upload a new receipt</title>
+</head>
+
+<body>
+    <h1>Add new expense</h1>
+    <form id="add-expense" enctype="multipart/form-data" method="post" action="/expenses">
+          <p>
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" />
+          </p>
+          <p>
+            <label for="date">Date:</label>
+            <input type="date" name="date">
+          </p>
+          <p>
+            <label for="file">Receipt scan</label>
+            <input id="fileupload" name="file" type="file" />
+          </p>
+          <p>
+            <input type="submit" value="Submit" id="submit" />
+          </p>
+        </form>
+</body>
+
+</html>

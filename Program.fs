@@ -11,7 +11,7 @@ open Giraffe.Middleware
 open Giraffe.Razor.HttpHandlers
 open Giraffe.Razor.Middleware
 open ExpenseReports.Models
-open ExpenseReports.Handlers.ReceiptHandler
+open ExpenseReports.Handlers.Expenses
 
 // ---------------------------------
 // Web app
@@ -22,11 +22,11 @@ let webApp =
         GET >=>
             choose [
                 route "/" >=> razorHtmlView "Index" { Text = "Hello world, from Giraffe!" }
-                route "/receipt" >=> htmlFile "/Views/Receipt.html"
+                route "/new" >=> htmlFile "/Views/NewExpense.html"
             ]
         POST >=>
             choose [
-                route "/receipts" >=> receiptUploadHandler
+                route "/expenses" >=> newExpenseHandler
             ]
 
         setStatusCode 404 >=> text "Not Found" ]

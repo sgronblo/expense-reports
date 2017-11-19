@@ -5,8 +5,8 @@ open Microsoft.AspNetCore.Http
 open Giraffe.HttpHandlers
 open Giraffe.Tasks
 
-module ReceiptHandler =
-    let receiptUploadHandler =
+module Expenses =
+    let newExpenseHandler =
         fun (next : HttpFunc) (ctx : HttpContext) ->
             task {
                 return!
