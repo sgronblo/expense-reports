@@ -11,7 +11,7 @@ open Giraffe.Middleware
 open Giraffe.Razor.HttpHandlers
 open Giraffe.Razor.Middleware
 open ExpenseReports.Models
-open ExpenseReports.Handlers.ExpenseHandler
+open ExpenseReports.Handlers
 
 // ---------------------------------
 // Web app
@@ -26,7 +26,7 @@ let webApp =
             ]
         POST >=>
             choose [
-                route "/expenses" >=> newExpenseHandler
+                route "/expenses" >=> ExpenseHandler.newExpense
             ]
 
         setStatusCode 404 >=> text "Not Found" ]

@@ -6,7 +6,7 @@ open Giraffe.HttpHandlers
 open Giraffe.Tasks
 
 module ExpenseHandler =
-    let newExpenseHandler (next : HttpFunc) (ctx : HttpContext) =
+    let newExpense (next : HttpFunc) (ctx : HttpContext) =
         task {
             return!
                 (match ctx.Request.HasFormContentType with
