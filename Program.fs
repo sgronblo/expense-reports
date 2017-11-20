@@ -11,7 +11,7 @@ open Giraffe.Middleware
 open Giraffe.Razor.HttpHandlers
 open Giraffe.Razor.Middleware
 open ExpenseReports.Models
-open ExpenseReports.Handlers.Expenses
+open ExpenseReports.Handlers.ExpenseHandler
 
 // ---------------------------------
 // Web app
