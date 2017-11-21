@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <DebugType>portable</DebugType>
-    <AssemblyName>expense_reports</AssemblyName>
+    <AssemblyName>ExpenseReports</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>expense_reports</PackageId>
+    <PackageId>ExpenseReports</PackageId>
     <RuntimeFrameworkVersion>2.0.0</RuntimeFrameworkVersion>
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
@@ -34,6 +34,7 @@
 
   <ItemGroup>
     <Compile Include="Models\*.fs" />
+    <Compile Include="Handlers\*.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

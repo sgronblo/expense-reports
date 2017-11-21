@@ -1,18 +1,17 @@
-module expense_reports.App
+module ExpenseReports.App
 
 open System
 open System.IO
-open System.Collections.Generic
 open Microsoft.AspNetCore.Builder
 open Microsoft.AspNetCore.Hosting
-open Microsoft.AspNetCore.Http
 open Microsoft.Extensions.Logging
 open Microsoft.Extensions.DependencyInjection
 open Giraffe.HttpHandlers
 open Giraffe.Middleware
 open Giraffe.Razor.HttpHandlers
 open Giraffe.Razor.Middleware
-open expense_reports.Models
+open ExpenseReports.Models
+open ExpenseReports.Handlers
 
 // ---------------------------------
 // Web app
@@ -23,7 +22,13 @@ let webApp =
         GET >=>
             choose [
                 route "/" >=> razorHtmlView "Index" { Text = "Hello world, from Giraffe!" }
+                route "/newExpense" >=> htmlFile "/Views/NewExpense.html"
             ]
+        POST >=>
+            choose [
+                route "/expenses" >=> ExpenseHandler.newExpense
+            ]
+
         setStatusCode 404 >=> text "Not Found" ]
 
 // ---------------------------------

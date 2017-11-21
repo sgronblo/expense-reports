@@ -1,4 +1,4 @@
-namespace expense_reports.Models
+namespace ExpenseReports.Models
 
 [<CLIMutable>]
 type Message =
